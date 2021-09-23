@@ -1,0 +1,45 @@
+apiVersion: kubescheduler.config.k8s.io/v1beta1
+kind: KubeSchedulerConfiguration
+leaderElection:
+  # (Optional) Change true to false if you are not running a HA control-plane.
+  leaderElect: true
+clientConnection:
+  kubeconfig: /etc/kubernetes/scheduler.conf
+profiles:
+- schedulerName: default-scheduler
+  plugins:
+    #queueSort:
+    #  enabled:
+    #  - name: SocketQuadPlugin
+    #  disabled:
+    #  - name: "*"
+    #preFilter:
+    #  enabled:
+    #  - name: SocketQuadPlugin
+    filter:
+      enabled:
+      - name: SocketQuadPlugin
+    #postFilter:
+    #  enabled:
+    #  - name: SocketQuadPlugin
+    #preScore:
+    #  enabled:
+    #  - name: SocketQuadPlugin
+    score:
+      enabled:
+      - name: SocketQuadPlugin
+    #reserve:
+    #  enabled:
+    #  - name: SocketQuadPlugin
+    #permit:
+    #  enabled:
+    #  - name: SocketQuadPlugin
+    #preBind:
+    #  enabled:
+    #  - name: SocketQuadPlugin
+    #bind:
+    #  enabled:
+    #  - name: SocketQuadPlugin
+    #postBind:
+    #  enabled:
+    #  - name: SocketQuadPlugin
