@@ -147,7 +147,7 @@ type slowDownMatrix map[appCategory]map[appCategory]float64
 var slowDowns = slowDownMatrix{
 	catA: map[appCategory]float64{
 		catA: 1.01,
-		catB: 1.12, // slowdown of catB when attacked by catA = 2.43
+		catB: 1.12, // slowdown of catB when attacked by catA = 1.12
 		catC: 1.22,
 		catD: 1.34,
 	},
@@ -160,11 +160,11 @@ var slowDowns = slowDownMatrix{
 	catC: map[appCategory]float64{
 		catA: 1.21,
 		catB: 3.09,
-		catC: 1.26, // slowdown of catC when attacked by catC = 2.12
+		catC: 1.26, // slowdown of catC when attacked by catC = 1.26
 		catD: 3.18,
 	},
 	catD: map[appCategory]float64{
-		catA: 1.47,
+		catA: 1.47, // slowdown of catA when attacked by catD = 1.47
 		catB: 2.54,
 		catC: 2.76,
 		catD: 3.25,

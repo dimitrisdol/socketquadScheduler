@@ -1,4 +1,4 @@
-SocketQuadSchedulertest01
+Socket Quad Scheduler
 
 This is a scheduler out-of-tree plugin in order to  asssign different types of applications to servers hoping for good socket fits.
 
