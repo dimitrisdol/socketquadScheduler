@@ -23,7 +23,7 @@ const (
 
 	// socketquadLabelKey is the key of the Kubernetes Label which every
 	// application that needs to be tracked by SocketQuadPlugin should have.
-	socketquadLabelKey = "socketquad"
+	socketquadLabelKey = "category"
 )
 
 // SocketQuadPlugin is an out-of-tree plugin for the kube-scheduler, which takes into
